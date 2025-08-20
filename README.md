@@ -66,7 +66,6 @@ Contraseña: creada aleatoria ver: docker logs -f monitoring
 
 Volumen monitoring guarda la configuración y datos históricos de Checkmk.
 
-
 ## Buenas prácticas recomendadas
 
 Restringir puertos en firewall.
@@ -74,7 +73,6 @@ Restringir puertos en firewall.
 Mantener actualizado Docker y Checkmk.
 
 Realizar backups periódicos del volumen monitoring.
-
 
 ## 👨‍💻 Autor
 
