@@ -1,0 +1,20 @@
+services:
+  checkmk:
+    image: "checkmk/check-mk-raw:2.4.0p9"
+    container_name: monitoring
+    hostname: checkmk-server
+#    environment:
+#      - CMK_PASSWORD=MiPassword123
+#      - TZ=America/Argentina/Buenos_Aires
+    volumes:
+      - monitoring:/omd/sites
+      - /etc/localtime:/etc/localtime:ro
+    tmpfs:
+      - /opt/omd/sites/cmk/tmp:uid=1000,gid=1000
+    ports:
+      - "8080:5000"
+      - "8000:8000"
+    restart: always
+
+volumes:
+  monitoring:
